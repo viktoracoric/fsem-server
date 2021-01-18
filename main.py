@@ -1,5 +1,6 @@
 import socket
 import sys
+from subprocess import call
 
 serverName = '0.0.0.0'
 serverPort = 14010
@@ -13,5 +14,5 @@ print("Server je spreman")
 
 while True:
     veza, klijentAdresa = sock.accept()
-    # kod ide ovdje
+    call(["python", "DiffieHellman.py"])
     veza.close()

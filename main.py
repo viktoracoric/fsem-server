@@ -14,5 +14,12 @@ print("Server je spreman")
 
 while True:
     veza, klijentAdresa = sock.accept()
+    zahtjev = veza.recv(1024)
+    zahtjev = zahtjev.decode()
+    print(zahtjev)
+    zahtjev.split("\r\n")
+    print(zahtjev)
+    if zahtjev[0] == 'PUBLISH':
+	    print("Lol")
     call(["python", "DiffieHellman.py"])
     veza.close()

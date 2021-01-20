@@ -1,11 +1,14 @@
 import os.path
 import sys
 import csv
-import subprocess
+from subprocess import call
 
 if os.path.exists("podaci.csv") == 0:
     f = open("podaci.csv", "x")
     f.close()
+    call(["python", "enkripcija.py", "e"])
+    sedKomanda = "sed -i 's/write_key()$/#write_key()/' enkripcija.py"
+    call([sedKomanda], shell=True)
 
 def provjeraDuplikata():
     f = open("podaci.csv", "r+")
@@ -13,7 +16,7 @@ def provjeraDuplikata():
     for redak in citaj:
         if redak[0] == sys.argv[2]:
             komanda = "sed -i -e 's/" + redak[1] + "/" + sys.argv[3] + "/' podaci.csv"
-            subprocess.call([komanda], shell=True)
+            call([komanda], shell=True)
             return 1
 
 def zapis():

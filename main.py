@@ -15,6 +15,8 @@ print("Server je spreman")
 
 while True:
     veza, klijentAdresa = sock.accept()
+    call(["python", "datoteka.py", "smece"])
+    call(["python", "enkripcija.py", "d"])
     zahtjev = veza.recv(1024)
     zahtjev = zahtjev.decode()
     zahtjev = zahtjev.splitlines()
@@ -30,5 +32,5 @@ while True:
         kljuc = kljuc.rstrip()
         kljuc = kljuc.encode()
         veza.send(kljuc)
-
+    call(["python", "enkripcija.py", "e"])
     veza.close()

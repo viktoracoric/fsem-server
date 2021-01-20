@@ -4,7 +4,7 @@ Serverska strana za mail sustav koji pruža forward secrecy.
 
 # Zahtjevi
 
-* Operacijski sustav baziran na UNIX-u
+* Operacijski sustav baziran na UNIX-u (točnije komanda sed, možda radi i na Windowsu)
 
 * cryptography (Python modul)
 

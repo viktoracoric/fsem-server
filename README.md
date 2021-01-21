@@ -5,7 +5,7 @@ Serverska strana za mail sustav koji pruža forward secrecy.
 # Zahtjevi
 
 * Operacijski sustav baziran na UNIX-u (točnije komanda sed, možda radi i na Windowsu)
-
+* python3
 * cryptography (Python modul)
 
     python -m pip install cryptography

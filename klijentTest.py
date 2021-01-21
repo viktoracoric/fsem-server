@@ -8,7 +8,7 @@ sock.connect((serverName, serverPort))
 
 # Za drugu vrstu zahtjeva samo komentirati i odkomentirati linije po potrebi
 
-zahtjev = "PUBLISH\r\nEMAIL: ivo.ivic@gmail.com\r\nECDH KEY PART: 2ifdasfoaoifa\r\n"
+zahtjev = "PUBLISH\r\nEMAIL: ivo.ivic@gmail.com\r\nECDH KEY PART: jifdqewnfqnf23r\r\n"
 #zahtjev = "GET\r\nEMAIL: ivo.ivic@gmail.com\r\n"
 
 sock.send(zahtjev.encode())

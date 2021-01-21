@@ -25,7 +25,7 @@ def decrypt(filename, key):
     with open(filename, "wb") as file:
         file.write(decrypted_data)
 
-#write_key()
+write_key()
 key = load_key()
 
 if sys.argv[1] == "e":
